@@ -30,7 +30,7 @@ public class NativeAdTemplate: UIView {
     }
     
     func commonInit() {
-        Bundle.init(for: NativeAdTemplate.self).loadNibNamed("NativeAdTemplate", owner: self, options: nil)
+        Bundle.module.loadNibNamed("NativeAdTemplate", owner: self, options: nil)
         addSubview(contentView)
         self.addConstraints([
             NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 0),
